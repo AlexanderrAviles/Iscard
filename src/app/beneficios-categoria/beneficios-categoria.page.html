@@ -1,0 +1,94 @@
+<ion-segment [(ngModel)]="selectedTab" (ionChange)="tabChanged()">
+  <ion-segment-button value="tarjeta">
+    <ion-icon class="icon" name="card-outline"></ion-icon>
+    <ion-label class="textSegment">Tarjeta</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="beneficios-categoria">
+    <ion-icon class="icon" name="gift-outline"></ion-icon>
+    <ion-label class="textSegment">Beneficios</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="actividad">
+    <ion-icon class="icon" name="bar-chart-outline"></ion-icon>
+    <ion-label class="textSegment">Historial</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-menu side="start" contentId="main-content" menuId="menu{{timestamp}}">
+  <app-side-menu class="ion-margin-top" style="width: 100%;"></app-side-menu>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
+<ion-header class="ion-no-border mtNav">
+  <ion-buttons class="btn-menu divcenter" slot="start">
+    <ion-menu-button (click)="openMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2.82606rem" height="2.5rem" viewBox="0 0 46 40" fill="none">
+        <rect x="0.5" y="0.5" width="44.2174" height="39" rx="9.5" stroke="white" stroke-opacity="0.4" />
+        <rect width="11.3043" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 32.174 13.0435)" fill="white" />
+        <rect width="11.3043" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 22.6086 26.087)" fill="white" />
+        <rect width="20.8696" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 32.174 19.4885)" fill="white" />
+      </svg>
+    </ion-menu-button>
+    <select class="bgSelect" name="region" (change)="onRegionChange($event)"
+      style="height: 34px; width: 302px; border: none; padding: 5px 10px;">
+      <option value="Todas las Regiones">Seleccionar Región</option>
+      <option value="Región de Arica y Parinacota">Región de Arica y Parinacota</option>
+      <option value="Región de Tarapacá">Región de Tarapacá</option>
+      <option value="Región de Antofagasta">Región de Antofagasta</option>
+      <option value="Región de Atacama">Región de Atacama</option>
+      <option value="Región de Coquimbo">Región de Coquimbo</option>
+      <option value="Región de Valparaíso">Región de Valparaíso</option>
+      <option value="Región Metropolitana">Región Metropolitana</option>
+      <option value="Región de O’Higgins">Región de O’Higgins</option>
+      <option value="Región del Maule">Región del Maule</option>
+      <option value="Región de Ñuble">Región de Ñuble</option>
+      <option value="Región de Biobío">Región del Biobío</option>
+      <option value="Región de Araucanía">Región de La Araucanía</option>
+      <option value="Región de Los Ríos">Región de Los Ríos</option>
+      <option value="Región de Los Lagos">Región de Los Lagos</option>
+      <option value="Región de Aysén">Región de Aysén</option>
+      <option value="Región de Magallanes">Región de Magallanes</option>
+    </select>
+
+  </ion-buttons>
+</ion-header>
+
+<ion-content class="background-image" [fullscreen]="true" contentId="main-content">
+  <div class="ion-margin">
+    <p class="textWhite ion-text-center" style="margin: 0;font-size: 13px;">Seleccionada <strong>{{
+        regionSeleccionada }}</strong></p>
+    <!-- <p *ngFor="let rubro of rubros">{{ rubro }}</p> -->
+    <div class="benefits ion-text-center">
+
+      <h3 style="margin: 6px 0px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="10" r="2.5" stroke="white" />
+          <mask id="mask0_21_70" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9" />
+          </mask>
+          <g mask="url(#mask0_21_70)">
+            <path
+              d="M12 19.35C14.0333 17.4833 15.5417 15.7875 16.525 14.2625C17.5083 12.7375 18 11.3833 18 10.2C18 8.38333 17.4208 6.89583 16.2625 5.7375C15.1042 4.57917 13.6833 4 12 4C10.3167 4 8.89583 4.57917 7.7375 5.7375C6.57917 6.89583 6 8.38333 6 10.2C6 11.3833 6.49167 12.7375 7.475 14.2625C8.45833 15.7875 9.96667 17.4833 12 19.35ZM12 22C9.31667 19.7167 7.3125 17.5958 5.9875 15.6375C4.6625 13.6792 4 11.8667 4 10.2C4 7.7 4.80417 5.70833 6.4125 4.225C8.02083 2.74167 9.88333 2 12 2C14.1167 2 15.9792 2.74167 17.5875 4.225C19.1958 5.70833 20 7.7 20 10.2C20 11.8667 19.3375 13.6792 18.0125 15.6375C16.6875 17.5958 14.6833 19.7167 12 22Z"
+              fill="white" />
+          </g>
+        </svg>
+        {{ regionSeleccionada }}
+      </h3>
+    </div>
+    <div *ngFor="let rubro of rubros" class="rubro-container" (click)="navigateToBeneficios(rubro,regionSeleccionada)">
+      <div class="divcenter ion-margin-vertical">
+        <div class="image-container">
+          <a href="beneficios">
+            <img class="beneficiosCat" [src]="imagenesRubro[rubro]" alt="">
+            <h3 class="ion-margin-start textBeneficios">{{ rubro }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="mostrarMensajeSinRubros" class="mensaje-sin-rubros divcenter ion-margin-vertical">
+      <div class="ion-text-center ">
+        <p class="ion-text-center textWhite">Por el momento no tenemos beneficios</p>
+        <p class="text-center textWhite">en esta zona.</p>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

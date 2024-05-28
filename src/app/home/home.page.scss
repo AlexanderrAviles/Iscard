@@ -1,0 +1,55 @@
+*{
+  font-family: "Montserrat", sans-serif;
+}
+.background-image {
+--background: url("../../assets/frame/bg1.png") 0 0/100% 65% no-repeat;
+background-color: white;
+}
+.container {
+margin-top: 70px;
+}
+
+.logo {
+width: 280.25px;
+}
+.title {
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+//   line-height: 123px;
+color: #ffffff;
+}
+.btnAcc {
+background: linear-gradient(90deg, #5fbeb6 0%, #47938c 53.4%, #35736d 100%);
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+padding: 18px 70px;
+/* identical to box height */
+
+margin-top: 128px;
+color: #ffffff;
+}
+.btnReg {
+background: #ffffff;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-weight: 500;
+font-size: 20px;
+padding: 18px 50px;
+
+margin-top: 20px;
+color: #2b2b2b;
+}
+.needHelp {
+font-size: 16px;
+color: #999999;
+}
+
+.btnLinks{
+background: linear-gradient(90deg, #5fbeb6 0%, #47938c 53.4%, #35736d 100%);
+border-radius: 4px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-weight: 500;
+font-size: 20px;
+padding: 5px 10px;
+}

@@ -1,0 +1,50 @@
+<ion-segment [(ngModel)]="selectedTab" (ionChange)="tabChanged()">
+  <ion-segment-button value="tarjeta">
+    <ion-icon class="icon" name="card-outline"></ion-icon>
+    <ion-label class="textSegment">Tarjeta</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="beneficios-categoria">
+    <ion-icon class="icon" name="gift-outline"></ion-icon>
+    <ion-label class="textSegment">Beneficios</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="actividad">
+    <ion-icon class="icon" name="bar-chart-outline"></ion-icon>
+    <ion-label class="textSegment">Historial</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-content class="background-image ion-margin-bottom" [fullscreen]="true" id="main-content">
+  <div class="container ">
+
+    <div class="">
+      <ion-buttons slot="start" class="ion-margin-start">
+        <a (click)="navigateToBeneficios()">
+          <ion-icon name="arrow-back-outline" style="color: white; width: 30px; height: 25px;"></ion-icon>
+        </a>
+
+      </ion-buttons>
+    </div>
+    <div *ngIf="empresas.length > 0 && empresas[0].banner" class="ion-text-center ion-margin">
+      <img [src]="empresas[0].banner" style="height: 24rem !important;" alt="Banner de la empresa">
+    </div>
+    <div *ngIf="empresas.length > 0" class="ion-text-center  ion-margin ">
+      <img [src]="empresas[0].logo"
+        style="max-width: 20%; border-radius: 50%;box-shadow: -1px 9px 28px 0px rgba(0,0,0,0.39);"
+        alt="Logo de la empresa">
+    </div>
+    <div class="ion-text-center" style="margin: 30px 0px;" *ngIf="empresas.length > 0">
+      <a class="ion-padding" href="{{empresas[0].url}}"
+        style="background-color: white;text-decoration: none; color: black; border-radius: 10px;">Visitar Pagina </a>
+    </div>
+    <div class="ion-text-center ion-margin-top ion-margin-horizontal">
+      <ion-card *ngFor="let convenio of convenios" class="card text-black">
+        <ion-card-header style="background-color: #F6F6F6;" class="ion-text-start">
+          <ion-card-subtitle>{{ convenio.empresa_nombre }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content style="background-color: #F6F6F6; padding-top: 10px;">
+          <p class="ion-text-start" style="font-size: 11px;">{{ convenio.nombre }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

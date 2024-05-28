@@ -1,0 +1,57 @@
+.menu-activo {
+  color: #00A99D !important;
+}
+
+.menu-activo path {
+  fill: #00A99D !important;
+}
+
+ion-item[button] {
+  pointer-events: auto !important;
+}
+
+
+ion-header {
+  --background: #EDEDF3;
+
+  ion-title {
+    --background: #EDEDF3;
+  }
+
+  ion-toolbar {
+    --background: #EDEDF3;
+  }
+}
+
+ion-content {
+  --background: #EDEDF3;
+
+  ion-list-header {
+    --background: #EDEDF3;
+    --color: #616162 !important;
+
+  }
+
+  ion-item {
+    --background: #EDEDF3;
+    --color: #616162 !important;
+    pointer-events: auto !important;
+
+    ion-icon {
+      padding-right: 10px !important;
+    }
+  }
+}
+
+ion-footer {
+  --background: #EDEDF3 !important;
+
+  ion-toolbar {
+    --background: #EDEDF3;
+  }
+}
+
+.pMenu {
+  font-family: 'Poppins', sans-serif;
+  ;
+}

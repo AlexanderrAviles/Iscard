@@ -1,0 +1,180 @@
+<ion-segment class="segmentTop" [(ngModel)]="selectedTab" (ionChange)="tabChanged()">
+  <ion-segment-button value="tarjeta">
+    <ion-icon class="icon" name="card-outline"></ion-icon>
+    <ion-label class="text">Tarjeta</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="beneficios-categoria">
+    <ion-icon class="icon" name="gift-outline"></ion-icon>
+    <ion-label class="text">Beneficios</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="actividad">
+    <ion-icon class="icon" name="bar-chart-outline"></ion-icon>
+    <ion-label class="text">Historial</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-menu side="start" contentId="main-content" menuId="menu{{timestamp}}">
+  <app-side-menu class="ion-margin-top" style="width: 100%;"></app-side-menu>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
+<ion-content class="background-image" [fullscreen]="true" contentId="main-content">
+
+  <div class="container ion-margin main-content ion-padding-bottom">
+    <div class="ion-margin-horizontal" style="margin-bottom: -20px;">
+      <ion-buttons slot="start">
+        <ion-menu-button (click)="openMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="svgMenu" width="2.82606rem" height="2.5rem"
+            viewBox="0 0 46 40">
+            <rect x="0.5" y="0.5" width="44.2174" height="39" rx="9.5" stroke="white" stroke-opacity="0.4" />
+            <rect width="11.3043" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 32.174 13.0435)"
+              fill="white" />
+            <rect width="11.3043" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 22.6086 26.087)"
+              fill="white" />
+            <rect width="20.8696" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 32.174 19.4885)"
+              fill="white" />
+          </svg>
+        </ion-menu-button>
+      </ion-buttons>
+
+    </div>
+
+
+    <div class="divcenter">
+      <ion-row class="ion-align-items-end" style="  width: 42vh;">
+        <ion-col size="6">
+          <p class="ion-margin-horizontal hiUser " name="firstName">Hola, {{primernombreUsuario}}</p>
+        </ion-col>
+        <ion-col size="1">
+        </ion-col>
+        <ion-col size="5">
+          <ion-row>
+            <ion-col class="textWhiteBold ion-text-end" style="font-size: 11px;" size="12">Puntos Acumulados</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="ion-text-end"
+              style="padding: 5px 10px 5px 5px; color: #ffff;letter-spacing: 1.14px;border-radius: 30px; background-color: #215F59;"
+              size="12">736764</ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- <p class="ion-margin-horizontal hiUser" name="firstName">Hola, {{primernombreUsuario}}</p> -->
+    <h4 class="ion-text-center textWhiteBold">Mi Tarjeta Virtual</h4>
+    <div class="ion-margin-horizontal divcenter">
+      <ion-row class="ion-justify-content-end ion-align-items-center bgCard prueba">
+        <ion-col size="7" class="ion-text-center">
+          <p class="ion-text-end" style="margin: 0px 16px 5px 0px;font-size: 13px; color: black;">{{establecimiento}}
+          </p>
+          <img src="../../assets/frame/iscardTarjeta.png" class="ion-margin-end" width="75" height="80" alt="Logo">
+          <br />
+          <p class="ion-text-start" style="margin:  2px 0px; font-size: 13px; font-weight: bold; color: black;">
+            {{nombreUsuario}}</p>
+        </ion-col>
+      </ion-row>
+
+    </div>
+
+
+    <div class="ion-margin-top">
+
+      <div class="divcenter " id="divHistorial">
+        <div class="ion-margin-horizontal " style="border-radius: 20px;  width: 40vh;height: 10vh;">
+          <img src="../../assets/frame/ingresa_compra.png" alt="">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="divcenter">
+      <div>
+        <ion-grid class="bgQr ion-margin-vertical" style="width: 19.5375rem; height: 7.5rem;">
+          <ion-row class=" ion-justify-content-center ion-align-items-center">
+            <ion-col size="7">
+              <h4 class="QrText ion-margin-start textWhiteBold">
+                Este es tú <br />
+                Codigo QR
+              </h4>
+            </ion-col>
+            <ion-col size="5">
+              <img class="qr" src="../../assets/frame/Qr.png" />
+
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-justify-content-center ion-margin-vertical">
+          </ion-row>
+          <br />
+        </ion-grid>
+      </div>
+    </div>
+    <div class="divcenter">
+      <div class="ion-margin-horizontal svg" style="border-radius: 10px; ">
+        <div>
+          <p class="textWhite ion-text-end" style="font-size: 9px; margin: 0px 16px 0px 0px;">
+            Siguiendonos en nuestras Redes Sociales y participa por una GiftCard de</p>
+        </div>
+        <ion-row class="ion-align-items-center ion-align-self-center" style=" width: 19.5375rem;height: 5.25rem;">
+          <ion-col size="7">
+            <p class="textWhiteBold ion-margin-start" style="font-size: 1.125rem;">
+              $50.000
+            </p>
+          </ion-col>
+          <ion-col size="5">
+            <ion-row class="ion-align-items-center ion-align-self-center">
+              <ion-col size="9">
+                <p class="textWhite ion-text-end" style="font-size: 9px; "> <strong
+                    style="font-size: 10px;">Ver bases</strong></p>
+              </ion-col>
+              <ion-col size="3">
+
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzklEQVR4nO2VMRKCMBBFwZviSAHewLG3Eo6iYkmB5+Am2jxnxy1iDBJIdCz8M2ky2ffCQkiSfCvAAsiBBmgHRm7VFF5rFX7mkT5QcFVOZy6UnUuKwC5UyrnZAmlLHwleARdb0D1NTIfvFF47eSECLHhUAQ54NAGwd8GNjyafLWBg5+8KvAXAdhJ8hqAENt7wqQKfBL+DsUQ9B678Bb/Zoib0d21GL62jObHS01kmgQHWysrsK/PkcWW2I0NqJQcgtc0psJRHCxAIOHuBfzJ3jV97YEKYlV4AAAAASUVORK5CYII=">
+              </ion-col>
+            </ion-row>
+
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div class="divcenter">
+      <p class="textWhite" style="font-size: 12px;">Siguenos en nuestras redes sociales</p>
+    </div>
+    <div class="divcenter">
+      <a class="textWhite ion-margin-end" href="https://www.facebook.com/profile.php?id=100092515116803"><ion-icon
+          style="font-size: 30px;" name="logo-facebook"></ion-icon></a>
+      <a class="textWhite" href="https://www.instagram.com/iscard.cl"><ion-icon style="font-size: 30px;"
+          name="logo-instagram"></ion-icon></a>
+    </div>
+    <div class="divcenter">
+      <ion-row style="width: 19.9375rem;">
+        <ion-col size="1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
+            <mask id="mask0_22_296" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16"
+              height="16">
+              <rect width="16" height="16" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_22_296)">
+              <path
+                d="M2.66659 11.3333V12.6667H13.3333V11.3333H2.66659ZM2.66659 3.99999H4.13325C4.0777 3.9 4.04158 3.79444 4.02492 3.68333C4.00825 3.57222 3.99992 3.45555 3.99992 3.33333C3.99992 2.77777 4.19436 2.30555 4.58325 1.91666C4.97214 1.52777 5.44436 1.33333 5.99992 1.33333C6.33325 1.33333 6.64158 1.41944 6.92492 1.59166C7.20825 1.76388 7.45547 1.97777 7.66658 2.23333L7.99992 2.66666L8.33325 2.23333C8.53325 1.96666 8.7777 1.74999 9.06659 1.58333C9.35547 1.41666 9.66658 1.33333 9.99992 1.33333C10.5555 1.33333 11.0277 1.52777 11.4166 1.91666C11.8055 2.30555 11.9999 2.77777 11.9999 3.33333C11.9999 3.45555 11.9916 3.57222 11.9749 3.68333C11.9583 3.79444 11.9221 3.9 11.8666 3.99999H13.3333C13.6999 3.99999 14.0138 4.13055 14.2749 4.39166C14.536 4.65277 14.6666 4.96666 14.6666 5.33333V12.6667C14.6666 13.0333 14.536 13.3472 14.2749 13.6083C14.0138 13.8694 13.6999 14 13.3333 14H2.66659C2.29992 14 1.98603 13.8694 1.72492 13.6083C1.46381 13.3472 1.33325 13.0333 1.33325 12.6667V5.33333C1.33325 4.96666 1.46381 4.65277 1.72492 4.39166C1.98603 4.13055 2.29992 3.99999 2.66659 3.99999ZM2.66659 9.33333H13.3333V5.33333H9.93325L11.3333 7.23333L10.2666 8L7.99992 4.93333L5.73325 8L4.66658 7.23333L6.03325 5.33333H2.66659V9.33333ZM5.99992 3.99999C6.18881 3.99999 6.34714 3.93611 6.47492 3.80833C6.6027 3.68055 6.66658 3.52222 6.66658 3.33333C6.66658 3.14444 6.6027 2.98611 6.47492 2.85833C6.34714 2.73055 6.18881 2.66666 5.99992 2.66666C5.81103 2.66666 5.6527 2.73055 5.52492 2.85833C5.39714 2.98611 5.33325 3.14444 5.33325 3.33333C5.33325 3.52222 5.39714 3.68055 5.52492 3.80833C5.6527 3.93611 5.81103 3.99999 5.99992 3.99999ZM9.99992 3.99999C10.1888 3.99999 10.3471 3.93611 10.4749 3.80833C10.6027 3.68055 10.6666 3.52222 10.6666 3.33333C10.6666 3.14444 10.6027 2.98611 10.4749 2.85833C10.3471 2.73055 10.1888 2.66666 9.99992 2.66666C9.81103 2.66666 9.6527 2.73055 9.52492 2.85833C9.39714 2.98611 9.33325 3.14444 9.33325 3.33333C9.33325 3.52222 9.39714 3.68055 9.52492 3.80833C9.6527 3.93611 9.81103 3.99999 9.99992 3.99999Z"
+                fill="white" />
+            </g>
+          </svg>
+        </ion-col>
+        <ion-col size="10">
+          <span class="ion-margin-horizontal textWhiteBold" style="font-size: 12px; margin: 0;">Empresas
+            adheridas</span>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="divcenter ion-margin-horizontal">
+      <div style="width: 19.9375rem;" *ngIf="empresas.length > 0">
+        <swiper-container #swiperContainer slides-per-view="3" mousewheel-force-to-axis="true" [loop]="true"
+          navigation="true" autoplay-delay="800" centered-slides="true" autoplay-disable-on-interaction="false"
+          class="swiper-container">
+          <swiper-slide class="swiper-slide" *ngFor="let empresa of empresas">
+            <img [src]="empresa.logo" alt="Logo de la empresa">
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</ion-content>

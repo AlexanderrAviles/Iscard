@@ -1,0 +1,200 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.background-image {
+  --background: linear-gradient(355deg, #5FBEB6 -10.32%, #47938C 50.29%, #35736D 103.19%);
+  overflow-y: auto;
+}
+
+.menu-activo {
+  color: #00A99D;
+}
+
+.menu-activo path {
+  fill: #00A99D !important;
+}
+
+
+ion-menu {
+  --background: #EDEDF3;
+}
+
+.pMenu {
+  font-family: 'Poppins', sans-serif;
+  ;
+}
+
+.clickable {
+  pointer-events: auto !important;
+}
+
+.segmentTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+  height: 4rem;
+}
+
+.container {
+  margin-top: 9vh;
+}
+
+.hiUser {
+  color: white;
+  margin: 0px 0px 0px 16px;
+}
+
+.textWhiteBold {
+  color: white;
+  font-weight: bold;
+}
+
+.textWhite {
+  color: white;
+}
+
+.textDark {
+  color: black;
+}
+.textDarkBold {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.divcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.beneficios {
+  width: 50px;
+  height: 50px;
+}
+
+.bgCard {
+  max-width: 39vh;
+  border-radius: 10px;
+  min-width: 312px;
+  min-height: 174px;
+  max-height: 174px;
+  max-width: 312px;
+  box-shadow: 0px 18px 22px 4px rgba(0, 0, 0, 0.26);
+}
+
+.prueba {
+  background: url('../../assets/frame/tarjeta.png') no-repeat;
+  background-color: white;
+  background-size: contain;
+}
+
+.imgCard {
+  border-radius: 10px;
+}
+
+.logo {
+  width: 49.645px;
+  height: 52.706px;
+
+}
+
+.nameCard {
+  font-size: 13px;
+}
+
+.bgQr {
+  background: linear-gradient(90deg, #5FBEB6 0%, #47938C 53.4%, #35736D 100%);
+  width: 100%;
+}
+
+.qr {
+  width: 5.75rem;
+  height: 5.75rem;
+}
+
+.test {
+  margin-top: -550;
+}
+
+.button-active {
+  /* Estilos cuando se presiona el botón */
+  --background: #ff00ff;
+  color: #fff;
+}
+
+.text {
+  font-size: 0.8125;
+}
+
+.icon {
+  font-size: 20px;
+}
+.svgMenu{
+  fill: transparent;
+}
+.svg {
+  background: url('../../assets/frame/estrella.svg')no-repeat !important;
+  background-color: #376AED !important;
+}
+.flecha{
+  fill: #5bc2b8;
+}
+
+.segment-button-checked.md::part(native) {
+  color: white !important;
+  background: linear-gradient(180deg, #3D8E86 -13.7%, #134844 143.15%);
+}
+
+ion-segment-button::part(indicator-background) {
+  background: #47938c !important;
+}
+
+ion-segment-button.md::part(native) {
+  color: #000;
+}
+
+
+.mr-benefits {
+  margin-right: 17.5px;
+}
+
+.font-benefits {
+  font-size: 9px;
+}
+
+
+
+// swiper-container {
+//   --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+//   --swiper-pagination-color: var(--ion-color-primary, #3880ff);
+//   --swiper-pagination-progressbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.25);
+//   --swiper-scrollbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
+//   --swiper-scrollbar-drag-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
+// }
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  flex-direction: column;
+  // flex-shrink: 0;
+  justify-content: space-around;
+  align-items: center !important;
+  margin: 0px 5px;
+  // font-size: 18px;
+  // box-sizing: border-box;
+}
+
+swiper-slide img {
+  max-height: 5rem;
+  max-width: 7rem;
+  margin-right: 10px;
+
+}
+

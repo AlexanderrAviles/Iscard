@@ -1,0 +1,100 @@
+<ion-segment [(ngModel)]="selectedTab" (ionChange)="tabChanged()">
+  <ion-segment-button value="tarjeta-premium">
+    <ion-icon class="icon" name="card-outline"></ion-icon>
+    <ion-label class="textSegment">Tarjeta</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="beneficios-categoria-premium">
+    <ion-icon class="icon" name="gift-outline"></ion-icon>
+    <ion-label class="textSegment">Beneficios</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="actividad-premium">
+    <ion-icon class="icon" name="bar-chart-outline"></ion-icon>
+    <ion-label class="textSegment">Historial</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-content class="background-image ion-margin-bottom" [fullscreen]="true" id="main-content">
+  <div class="container ">
+
+    <div class="">
+      <ion-buttons slot="start" class="ion-margin-start">
+        <a href="beneficios-categoria">
+          <ion-icon name="arrow-back-outline" class="textDark" style="width: 30px; height: 25px;"></ion-icon>
+        </a>
+      </ion-buttons>
+      <div class="benefits ion-text-center textDark">
+        <p class="textDark" style=" font-weight: normal !important; margin: 0;">Seleccionado</p>
+        <h3 style="margin: 6px 0px;" class="textDark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="10" r="2.5" stroke="black" />
+            <mask id="mask0_21_70" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+              height="24">
+              <rect width="24" height="24" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_21_70)">
+              <path
+                d="M12 19.35C14.0333 17.4833 15.5417 15.7875 16.525 14.2625C17.5083 12.7375 18 11.3833 18 10.2C18 8.38333 17.4208 6.89583 16.2625 5.7375C15.1042 4.57917 13.6833 4 12 4C10.3167 4 8.89583 4.57917 7.7375 5.7375C6.57917 6.89583 6 8.38333 6 10.2C6 11.3833 6.49167 12.7375 7.475 14.2625C8.45833 15.7875 9.96667 17.4833 12 19.35ZM12 22C9.31667 19.7167 7.3125 17.5958 5.9875 15.6375C4.6625 13.6792 4 11.8667 4 10.2C4 7.7 4.80417 5.70833 6.4125 4.225C8.02083 2.74167 9.88333 2 12 2C14.1167 2 15.9792 2.74167 17.5875 4.225C19.1958 5.70833 20 7.7 20 10.2C20 11.8667 19.3375 13.6792 18.0125 15.6375C16.6875 17.5958 14.6833 19.7167 12 22Z"
+                fill="black" />
+            </g>
+          </svg>
+          {{ region }}
+        </h3>
+      </div>
+    </div>
+    <div class="divcenter ion-margin-top">
+      <div class=" image-container">
+        <img class="beneficiosCat" style="width:342px; height:210px" [src]="imageUrl" alt="">
+        <h3 class="ion-margin-start textBeneficios">{{ rubro }}</h3>
+      </div>
+    </div>
+    <div class="divcenter ion-margin-horizontal ion-margin-top" style="margin-bottom: 50px;">
+      <ion-scroll scrollY="true"
+        style="box-shadow: 0px 18px 22px 7px rgba(0,0,0,0.62); background-color: white;border-radius: 9px;max-height: 390px !important;">
+        <div class="divHistorial">
+          <ion-card class="card" *ngFor="let convenio of convenios"
+            (click)="navigateToBeneficiosDetalle(rubro, convenio.nombre,convenio.empresa_nombre,imageUrl)">
+            <!-- <ion-card-header style="padding: 0;">
+              <ion-card-subtitle
+                style="background-color:rgba(217, 217, 217, 0.46);color: black; font-size: 11px;"><strong
+                  class="ion-margin-horizontal">Fecha de Movimiento</strong>27/08/2023</ion-card-subtitle>
+            </ion-card-header> -->
+            <ion-card-content style="background-color: #F6F6F6; padding: 0;">
+              <ion-row>
+                <ion-col size="4" class="ion-text-center">
+                  <span class="ion-text-center" style="font-size: 11px;color: black;">Empresa</span>
+                  <img style="width: 160.482px;max-height: 100px;" [src]="convenio.empresa_logo_url"
+                    class="ion-text-center logoBenefits" alt="">
+                  <svg style="top: 10%;" class="svg ion-margin-start" xmlns="http://www.w3.org/2000/svg" width="2"
+                    height="88px" viewBox="0 0 2 100" fill="none">
+                    <path d="M1 1L0.999998 80" stroke="#C2C2C8" stroke-linecap="round" />
+                  </svg>
+                </ion-col>
+                <ion-col size="7">
+                  <p class="ion-text-center" style="font-size: 10px;color: black;">Descuentos Disponibles</p>
+                  <p class="ion-text-center" style="font-size: 11px; font-weight:bold;
+                  color: black;    overflow: hidden;
+   display: -webkit-box;-webkit-line-clamp: 4; line-clamp:4;
+   -webkit-box-orient: vertical;">{{ convenio.nombre
+                    }}</p>
+                </ion-col>
+                <ion-col size="1" style="  display: flex;
+                align-items: center;">
+                  <ion-row class="ion-align-items-center">
+                    <ion-col size="12"> <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="9"
+                        height="15" viewBox="0 0 9 15" fill="none">
+                        <path
+                          d="M1.68429 14.5834L0.427002 13.3261L6.25304 7.50002L0.427002 1.67398L1.68429 0.416687L8.76763 7.50002L1.68429 14.5834Z"
+                          fill="#D9D9D9" />
+                      </svg></ion-col>
+                  </ion-row>
+
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+
+        </div>
+      </ion-scroll>
+    </div>
+  </div>
+</ion-content>

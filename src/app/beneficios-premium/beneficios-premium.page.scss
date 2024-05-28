@@ -1,0 +1,209 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.background-image {
+  // --background: white;
+  --background: linear-gradient(355deg, #e7fffd -10.32%, rgb(218, 245, 243)0.29%, #ebf1f1 103.19%);
+  // background-color: var(--secondary-background-color);
+  // --background: linear-gradient(90deg, #000000 0%, #00000071 53.4%, #000000 100%);
+  overflow-y: auto;
+}
+
+.container {
+  margin-top: 10vh;
+}
+
+.mtNav {
+  margin-top: 8vh;
+}
+
+.benefits {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.textBeneficios {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  color: white;
+}
+
+.textWhiteBold {
+  color: white;
+  font-weight: bold;
+}
+
+.textWhite {
+  color: white;
+}
+
+.textDark {
+  color: black;
+}
+.textDarkBold {
+  color: black;
+  font-weight: bold;
+}
+
+
+.menu {
+  --background: rgb(255, 255, 255) !important;
+  color: black;
+}
+
+.selected {
+  --background: #e0e0e0;
+  /* Cambia el color de fondo a tu preferencia */
+  font-weight: bold;
+  /* Cambia el estilo de fuente a tu preferencia */
+}
+
+.divcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.svg {
+  float: left;
+  position: absolute;
+}
+
+.divHistorial {
+  background-color: #FFF;
+  border-radius: 9px;
+  padding-top: 2px;
+  width: 358px;
+
+}
+
+.card {
+  border-radius: 10px;
+  --background: #F6F6F6;
+  margin-top: 10px !important;
+  padding: 0 !important;
+  color: #000;
+
+}
+
+.benefits {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.benefitsWhite {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 13px 17px 47px -4px rgba(0, 0, 0, 0.075)
+}
+
+.textBlue {
+  color: #423CB5;
+  font-weight: bolder;
+  margin-left: 10px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.logo-container {
+  height: 100px;
+  /* Ajusta la altura según tus necesidades */
+  display: flex;
+  align-items: center;
+}
+
+.rubro {
+  font-size: 10px;
+}
+
+.logoBenefits {
+  max-width: 100px;
+  max-height: 100px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 12px;
+  color: black;
+}
+
+ion-scroll {
+  overflow-y: auto;
+}
+
+.nameBusiness {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+@media (max-width:700px) {
+  .logoBenefits {
+    max-width: 70px;
+    padding: 0;
+  }
+}
+
+.textSegment {
+  font-size: 13px;
+  letter-spacing: 1.8px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+ion-segment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0B0B0B;
+  z-index: 999;
+  height: 4rem;
+}
+
+.segment-button-checked.md::part(native) {
+  color: white !important;
+  background: linear-gradient(90deg, #5fbeb6 0%, #47938c 53.4%, #35736d 100%);
+}
+
+ion-segment-button::part(indicator-background) {
+  background: #47938c !important;
+}
+
+ion-segment-button.md {
+  --color: #ffffff;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  width: 342px;
+  height: 210px;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(44, 48, 46, 0.00) 38.85%, #0E322F 100%);
+}
+
+.beneficiosCat {
+  display: block;
+  width: 100%;
+  height: auto;
+}

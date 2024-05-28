@@ -1,0 +1,140 @@
+<ion-segment [(ngModel)]="selectedTab" (ionChange)="tabChanged()">
+  <ion-segment-button value="tarjeta-premium">
+    <ion-icon class="icon" name="card-outline"></ion-icon>
+    <ion-label class="text">Tarjeta</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="beneficios-categoria-premium">
+    <ion-icon class="icon" name="gift-outline"></ion-icon>
+    <ion-label class="text">Beneficios</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="actividad-premium">
+    <ion-icon class="icon" name="bar-chart-outline"></ion-icon>
+    <ion-label class="text">Historial</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-menu side="start" contentId="main-content" menuId="menu{{timestamp}}">
+  <app-side-menu class="ion-margin-top" style="width: 100%;"></app-side-menu>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
+<ion-content class="background-image" [fullscreen]="true" contentId="main-content">
+  <div class="container ion-margin main-content ion-padding-bottom">
+    <div class="ion-margin-horizontal" style="margin-bottom: -20px;">
+
+      <ion-buttons slot="start">
+        <ion-menu-button (click)="openMenu()"> <svg xmlns="http://www.w3.org/2000/svg" width="2.82606rem"
+            height="2.5rem" viewBox="0 0 46 40" fill="none">
+            <rect x="0.5" y="0.5" width="44.2174" height="39" rx="9.5" stroke="#00A99D" stroke-opacity="0.4" />
+            <rect width="11.3043" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 32.174 13.0435)"
+              fill="#00A99D" />
+            <rect width="11.3043" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 22.6086 26.087)"
+              fill="#00A99D" />
+            <rect width="20.8696" height="1.73913" rx="0.869565" transform="matrix(-1 0 0 1 32.174 19.4885)"
+              fill="#00A99D" />
+          </svg></ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div class="divcenter">
+      <ion-row class="ion-align-items-end" style="  width: 42vh;">
+        <ion-col size="6">
+          <p class="ion-margin-horizontal hiUser textDark" name="firstName">Hola, {{primernombreUsuario}}</p>
+        </ion-col>
+        <ion-col size="1">
+        </ion-col>
+        <ion-col size="5">
+          <ion-row>
+            <ion-col class="textDarkBold ion-text-end" style="font-size: 11px;" size="12">Puntos Acumulados</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="ion-text-end textWhite"
+              style="padding: 5px 10px 5px 5px;letter-spacing: 1.14px;border-radius: 30px; background-color: #215F59;"
+              size="12">736764</ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+    <h4 class="ion-text-center textDarkBold">Mi Tarjeta Virtual</h4>
+    <div class="divcenter">
+      <ion-row class="ion-justify-content-star ion-align-items-center bgCard prueba">
+        <ion-col size="7" class="ion-text-center">
+          <p class="ion-text-end textWhite" style="margin: 0px 16px 5px 0px; font-size: 13px;">{{establecimiento}}</p>
+          <img src="../../assets/frame/iscardTarjeta.png" class="ion-margin-end" width="75" height="80" alt="Logo">
+          <br />
+          <p class="ion-text-end textWhite" style="margin: 0px 16px 5px 0px; font-size: 13px; font-weight: bold;">
+            {{nombreUsuario}}</p>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="ion-margin-top">
+      <div class="divcenter" id="divHistorial">
+        <div class="ion-margin-horizontal " style="border-radius: 20px;  width: 40vh;height: 10vh;">
+          <img src="../../assets/frame/ingresa_compra.png" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+
+    <div class="divcenter">
+      <div>
+
+        <ion-grid class="bgQr ion-margin-vertical" style="width: 19.9375rem; height: 7.5rem;">
+          <ion-row class="ion-justify-content-center ion-align-items-center">
+            <ion-col size="7">
+              <h4 class="QrText ion-margin-start textWhiteBold">Este es tu Código QR</h4>
+            </ion-col>
+            <ion-col size="5">
+              <img class="qr" src="../../assets/frame/Qr.png" />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="divcenter">
+      <div class="ion-margin-horizontal svg" style="border-radius: 10px;">
+
+        <ion-row class="ion-align-items-center" style="width: 19.9375rem; height: 5.25rem;">
+          <ion-col size="7">
+            <p class="textWhiteBold ion-margin-start" style="font-size: 1.125rem;">Participa por una GiftCard</p>
+          </ion-col>
+          <ion-col size="5">
+            <p class="textWhiteBold ion-text-center" style="font-size: 1.375rem;margin: 0;">$50.000</p>
+            <p class="textWhite ion-text-end" style="font-size: 9px; margin: 0px 16px 0px 0px;">
+              Siguiendonos en nuestras <strong style="font-size: 10px;">Redes Sociales</strong></p>
+          </ion-col>
+        </ion-row>
+
+      </div>
+    </div>
+    <div class="divcenter">
+      <p class="textDark" style="font-size: 12px;">Siguenos en nuestras redes sociales</p>
+    </div>
+    <div class="divcenter">
+      <a class="textDark ion-margin-end" href="https://www.facebook.com/profile.php?id=100092515116803"><ion-icon
+          style="font-size: 30px;" name="logo-facebook"></ion-icon></a>
+      <a class="textDark" href="https://www.instagram.com/iscard.cl"><ion-icon style="font-size: 30px;"
+          name="logo-instagram"></ion-icon></a>
+    </div>
+    <div class="divcenter">
+      <ion-row style="width: 19.9375rem;">
+        <ion-col size="1">
+
+        </ion-col>
+        <ion-col size="10">
+
+          <span class="ion-margin-horizontal textDarkBold" style="font-size: 12px; margin: 0;">Empresas adheridas</span>
+        </ion-col>
+
+      </ion-row>
+    </div>
+    <div class="divcenter ion-margin-horizontal">
+      <div style="width: 19.9375rem;" *ngIf="empresas.length > 0">
+        <swiper-container #swiperContainer slides-per-view="3" mousewheel-force-to-axis="true" autoplay-delay="800"
+          centered-slides="true" autoplay-disable-on-interaction="false" class="swiper-container">
+          <swiper-slide class="swiper-slide" *ngFor="let empresa of empresas">
+            <img [src]="empresa.logo" alt="Logo de la empresa">
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</ion-content>

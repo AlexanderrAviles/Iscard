@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">iscard</string>
+    <string name="title_activity_main">iscard</string>
+    <string name="package_name">com.polodev.iscard</string>
+    <string name="custom_url_scheme">com.polodev.iscard</string>
+</resources>

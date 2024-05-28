@@ -1,0 +1,158 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.background-image {
+  // --background: white;
+  --background:linear-gradient(355deg, #e7fffd -10.32%, rgb(218, 245, 243)0.29%, #ebf1f1 103.19%);
+  // background-color: var(--secondary-background-color);
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flecha{
+  fill: #5bc2b8;
+}
+
+ion-segment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0B0B0B;
+  z-index: 999;
+  height: 4rem;
+}
+
+.segment-button-checked.md::part(native) {
+  color: white !important;
+  background: linear-gradient(90deg, #5fbeb6 0%, #47938c 53.4%, #35736d 100%);
+}
+
+ion-segment-button::part(indicator-background) {
+  background: #47938c !important;
+}
+
+ion-segment-button.md {
+  --color: #ffffff;
+}
+
+.container {
+  margin-top: 9vh;
+}
+
+ion-menu {
+  --background: #EDEDF3;
+}
+
+.textWhiteBold {
+  color: white;
+  font-weight: bold;
+}
+
+.textWhite {
+  color: white;
+}
+
+.textDarkBold {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.textDark {
+  color: rgb(0, 0, 0);
+}
+
+.text {
+  font-size: 13px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+
+.divcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.bgCard {
+  max-width: 39vh;
+  border-radius: 10px;
+  min-width: 312px;
+  min-height: 174px;
+  max-height: 174px;
+  max-width: 312px;
+  box-shadow: 0px 18px 22px 4px rgba(0, 0, 0, 0.26);
+}
+
+.prueba {
+  background: url('../../assets/frame/tarjetaVIP.png') no-repeat;
+  background-color: #131313;
+  background-size: contain;
+}
+
+.bgQr {
+  background: linear-gradient(90deg, #000202 0%, #050a0a 53.4%, #00000071 100%);
+  width: 100%;
+}
+
+.qr {
+  width: 5.75rem;
+  height: 5.75rem;
+}
+
+.bg-benefits {
+  background-color: white;
+  border-radius: 20%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 5px 0px;
+  width: 4.55175rem;
+  height: 4.125rem;
+}
+
+.svg {
+  background: url('../../assets/frame/estrella.svg')no-repeat !important;
+  background-color: #376AED !important;
+}
+
+.mr-benefits {
+  margin-right: 17.5px;
+}
+
+.font-benefits {
+  font-size: 9px;
+}
+
+.beneficios {
+  width: 50px;
+  height: 50px;
+}
+
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  flex-direction: column;
+  // flex-shrink: 0;
+  justify-content: space-around;
+  align-items: center !important;
+  margin: 0px 5px;
+  // font-size: 18px;
+  // box-sizing: border-box;
+}
+
+swiper-slide img {
+  max-height: 5rem;
+  max-width: 7rem;
+  margin-right: 10px;
+
+}

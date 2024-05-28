@@ -1,0 +1,140 @@
+<ion-header class="menu ion-margin-vertical ion-margin-start ion-no-border background-menu">
+  <ion-toolbar class="menu background-menu">
+    <ion-title style="margin-left: 5px;" class="background-menu">
+      <img [src]="getImagenUrl()" width="79" height="84" alt="">
+    </ion-title>
+    <ion-title style="font-size: 16px; font-weight: 700; color: black;">ISCard</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="menu " style="height: 35rem;">
+  <ion-list class="menu background-menu " style="padding: 0; margin-top: 20px;">
+    <ion-item button class="menu background-menu" [class.menu-activo]="isActive('/tarjeta')" lines="none"
+      (click)="redirectToPage('/tarjeta')" >
+      <ion-label class="background-menu ion-margin-start">
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <mask id="mask0_5_423" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_5_423)">
+                <path
+                  d="M22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6ZM4 8H20V6H4V8ZM4 12V18H20V12H4Z"
+                  fill="#A6A6A9" />
+              </g>
+            </svg>
+          </ion-col>
+          <ion-col size="10">
+            <p class="pMenu">
+              Tarjeta
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+    <ion-item button class="menu " lines="none" [class.menu-activo]="isActive('/beneficios-categoria')"
+      (click)="redirectToPage('/beneficios-categoria')">
+      <ion-label class="ion-margin-start ">
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <mask id="mask0_5_358" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_5_358)">
+                <path
+                  d="M4 17V19H20V17H4ZM4 6H6.2C6.11667 5.85 6.0625 5.69167 6.0375 5.525C6.0125 5.35833 6 5.18333 6 5C6 4.16667 6.29167 3.45833 6.875 2.875C7.45833 2.29167 8.16667 2 9 2C9.5 2 9.9625 2.12917 10.3875 2.3875C10.8125 2.64583 11.1833 2.96667 11.5 3.35L12 4L12.5 3.35C12.8 2.95 13.1667 2.625 13.6 2.375C14.0333 2.125 14.5 2 15 2C15.8333 2 16.5417 2.29167 17.125 2.875C17.7083 3.45833 18 4.16667 18 5C18 5.18333 17.9875 5.35833 17.9625 5.525C17.9375 5.69167 17.8833 5.85 17.8 6H20C20.55 6 21.0208 6.19583 21.4125 6.5875C21.8042 6.97917 22 7.45 22 8V19C22 19.55 21.8042 20.0208 21.4125 20.4125C21.0208 20.8042 20.55 21 20 21H4C3.45 21 2.97917 20.8042 2.5875 20.4125C2.19583 20.0208 2 19.55 2 19V8C2 7.45 2.19583 6.97917 2.5875 6.5875C2.97917 6.19583 3.45 6 4 6ZM4 14H20V8H14.9L17 10.85L15.4 12L12 7.4L8.6 12L7 10.85L9.05 8H4V14ZM9 6C9.28333 6 9.52083 5.90417 9.7125 5.7125C9.90417 5.52083 10 5.28333 10 5C10 4.71667 9.90417 4.47917 9.7125 4.2875C9.52083 4.09583 9.28333 4 9 4C8.71667 4 8.47917 4.09583 8.2875 4.2875C8.09583 4.47917 8 4.71667 8 5C8 5.28333 8.09583 5.52083 8.2875 5.7125C8.47917 5.90417 8.71667 6 9 6ZM15 6C15.2833 6 15.5208 5.90417 15.7125 5.7125C15.9042 5.52083 16 5.28333 16 5C16 4.71667 15.9042 4.47917 15.7125 4.2875C15.5208 4.09583 15.2833 4 15 4C14.7167 4 14.4792 4.09583 14.2875 4.2875C14.0958 4.47917 14 4.71667 14 5C14 5.28333 14.0958 5.52083 14.2875 5.7125C14.4792 5.90417 14.7167 6 15 6Z"
+                  fill="#A6A7A9" />
+              </g>
+            </svg>
+          </ion-col>
+          <ion-col size="10">
+            <p class="pMenu">
+              Beneficios
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+    <ion-item class="menu" lines="none" [class.menu-activo]="isActive('/actividad')"
+      (click)="redirectToPage('/actividad')" >
+      <ion-label class="ion-margin-start">
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <mask id="mask0_5_361" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_5_361)">
+                <path
+                  d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V3H5V19H21V21H5ZM6 18V9H10V18H6ZM11 18V4H15V18H11ZM16 18V13H20V18H16Z"
+                  fill="#A6A6A9" />
+              </g>
+            </svg>
+          </ion-col>
+          <ion-col size="10">
+            <p class="pMenu">
+              Actividad
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+    <ion-item class="menu" lines="none">
+      <ion-label class="ion-margin-start">
+        <!-- <ion-row class="ion-align-items-center">
+          <ion-col size="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M10 11.25C13.1055 11.25 15.625 8.73047 15.625 5.625C15.625 2.51953 13.1055 0 10 0C6.89453 0 4.375 2.51953 4.375 5.625C4.375 8.73047 6.89453 11.25 10 11.25ZM15 12.5H12.8477C11.9805 12.8984 11.0156 13.125 10 13.125C8.98438 13.125 8.02344 12.8984 7.15234 12.5H5C2.23828 12.5 0 14.7383 0 17.5V18.125C0 19.1602 0.839844 20 1.875 20H18.125C19.1602 20 20 19.1602 20 18.125V17.5C20 14.7383 17.7617 12.5 15 12.5Z"
+                fill="black" fill-opacity="0.31" />
+            </svg>
+          </ion-col>
+          <ion-col size="10">
+            <p class="pMenu">
+              Perfil
+            </p>
+          </ion-col>
+        </ion-row> -->
+      </ion-label>
+    </ion-item>
+    <ion-item class="menu" lines="none">
+      <ion-label class="ion-margin-start">
+        <ion-row>
+          <ion-col size="2">
+
+          </ion-col>
+          <ion-col size="10">
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+    <ion-item class="menu" lines="none" (click)="cerrarSesion()">
+      <ion-label class="ion-margin-start">
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
+              <path
+                d="M19.7232 9.25225L13.0562 16.6885C12.4609 17.3525 11.4291 16.8877 11.4291 15.936V11.6867H6.03205C5.50424 11.6867 5.07962 11.2131 5.07962 10.6244V6.37513C5.07962 5.78642 5.50424 5.3128 6.03205 5.3128H11.4291V1.06351C11.4291 0.116271 12.457 -0.352922 13.0562 0.31103L19.7232 7.74729C20.0923 8.16337 20.0923 8.83618 19.7232 9.25225ZM7.61943 16.4672V14.6967C7.61943 14.4045 7.40513 14.1655 7.14321 14.1655H3.80971C3.1073 14.1655 2.53981 13.5325 2.53981 12.7491V4.25048C2.53981 3.46702 3.1073 2.83405 3.80971 2.83405H7.14321C7.40513 2.83405 7.61943 2.59503 7.61943 2.30289V0.532347C7.61943 0.240208 7.40513 0.00118556 7.14321 0.00118556H3.80971C1.70643 0.00118556 0 1.90452 0 4.25048V12.7491C0 15.095 1.70643 16.9984 3.80971 16.9984H7.14321C7.40513 16.9984 7.61943 16.7593 7.61943 16.4672Z"
+                fill="#F22727" />
+            </svg>
+          </ion-col>
+          <ion-col size="10">
+            <p class="pMenu">
+              Cerrar Sesión
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer class="ion-no-border ion-margin-start ">
+  <ion-toolbar class="ion-margin-start ion-margin-bottom" >
+    <p style="font-size: 14px; color: #B1B1C3; margin: 0px 0px 5px 0px;">ISCard APP</p>
+    <p style="font-size: 14px; color: #B1B1C3;margin: 0;  ">App Versión {{versionNumber}}</p>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "iscard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

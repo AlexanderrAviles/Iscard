@@ -1,0 +1,64 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.background-image {
+  // --background: white;
+  --background: linear-gradient(355deg, #e7fffd -10.32%, rgb(218, 245, 243)0.29%, #ebf1f1 103.19%);
+  // background-color: var(--secondary-background-color);
+  // --background: linear-gradient(90deg, #000000 0%, #00000071 53.4%, #000000 100%);
+  overflow-y: auto;
+}
+
+.textWhiteBold {
+  color: white;
+  font-weight: bold;
+}
+
+.textWhite {
+  color: white;
+}
+
+.textDark {
+  color: black;
+}
+.textDarkBold {
+  color: black;
+  font-weight: bold;
+}
+
+.container {
+  margin-top: 10vh;
+}
+
+.textSegment {
+  font-size: 13px;
+  letter-spacing: 1.8px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+ion-segment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0B0B0B;
+  z-index: 999;
+  height: 4rem;
+}
+
+.segment-button-checked.md::part(native) {
+  color: white !important;
+  background: linear-gradient(90deg, #5fbeb6 0%, #47938c 53.4%, #35736d 100%);
+}
+
+ion-segment-button::part(indicator-background) {
+  background: #47938c !important;
+}
+
+ion-segment-button.md {
+  --color: #ffffff;
+}

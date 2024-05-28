@@ -1,0 +1,62 @@
+*{
+  font-family: "Montserrat";
+}
+.background-image {
+  --background: url("../../assets/frame/bg2.png") 0 0/100% 74% no-repeat;
+  background-color: white !important;
+  // background-color: var(--primary-background-color);
+}
+.container {
+  margin-top: 17px;
+}
+.access {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+}
+
+.inputDivName {
+  background-color: white;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.inputDivPass {
+  background-color: white !important;
+  --background: white;
+}
+.accessLabel {
+  // margin-left: 10px;
+  font-weight: 520;
+  color: #00a99d;
+
+}
+.btnEnter {
+  background: linear-gradient(90deg, #5FBEB6 0%, #47938C 53.4%, #35736D 100%);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 18px 70px;
+  margin-top: 0px;
+  color: #ffffff;
+}
+.needHelp {
+  font-size: 16px;
+  color: #999;
+  margin-top: 120px;
+}
+.noSoy{
+  color: white;
+}
+.olvidarCont{
+  margin-top: 0;
+}
+.btnEnter2 {
+  background: linear-gradient(90deg, #5FBEB6 0%, #47938C 53.4%, #35736D 100%);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 18px 70px;
+  margin-top: 0px;
+  color: #ffffff;
+}
